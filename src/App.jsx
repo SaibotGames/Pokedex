@@ -18,7 +18,7 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <StyledWrapper>
-        <Router basename="/Pokedex/">
+        <Router basename="/Pokedex">
           <NavBar toggle={toggleTheme} isDark={isDark} />
           <Routes>
             <Route path="/" element={<Pokedex />} />
