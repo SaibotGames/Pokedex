@@ -13,13 +13,13 @@ import About from "./components/About";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
-  const toggleTheme = () => setIsDark((!isDark));
+  const toggleTheme = () => setIsDark(!isDark);
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <StyledWrapper>
-        <Router>
-          <NavBar toggle ={toggleTheme} isDark={isDark}/>
+        <Router basename="/Pokedex/">
+          <NavBar toggle={toggleTheme} isDark={isDark} />
           <Routes>
             <Route path="/" element={<Pokedex />} />
             <Route path="/pokemon/:name" element={<PokemonDetails />} />
