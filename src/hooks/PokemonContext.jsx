@@ -48,7 +48,6 @@ const PokemonProvider = ({ children, initialPage, initialPageSize }) => {
 
       try {
         const pokemonUrls = await fetchPokemonUrlList(currentPage, pageSize);
-        console.log("lalal");
         const pl = await fetchPokemonDetails(pokemonUrls);
         setPokemonList(pl);
       } catch (e) {

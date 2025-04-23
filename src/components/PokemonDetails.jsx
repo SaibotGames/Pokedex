@@ -11,7 +11,6 @@ const PokemonDetails = () => {
   if (!pokemon) {
     return <p>No Pokémon data available. Please go back to the list.</p>;
   }
-  console.log(pokemon);
   const capitalizedName = (str) => {
     if (!str) return "";
     return str.charAt(0).toUpperCase() + str.slice(1);
